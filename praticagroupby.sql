@@ -23,5 +23,5 @@ GROUP BY users.name;
 SELECT MAX(jobs.salary) AS salario, roles.name AS cargo
 FROM jobs
 JOIN roles
-ON roles.id=jobs."roleId"
+ON roles.id=jobs."roleId" AND jobs.active = true
 GROUP BY jobs.salary, roles.name ORDER BY salary ASC;
